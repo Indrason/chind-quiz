@@ -1,0 +1,63 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	color: #6600ff;
+	background-color: #4dd2ff;
+	text-align: center;
+	font-size: 24px;
+	line-height: 36px;
+	height: 36px;
+	font-weight: bolder;
+}
+
+#slider {
+	width: 50%;
+	height: 500px;
+	background-color: #6666ff;
+	float: left;
+}
+
+#users {
+	width: 50%;
+	height: 500px;
+	background-color: #66ff66;
+	float: right;
+}
+
+button {
+	width: 100px;
+	height: 40px;
+	border-radius: 20%;
+	background-color: blue;
+	color: white;
+}
+
+button:hover {
+	background-color: green;
+	cursor: pointer;
+}
+
+table {
+	border: 0;
+}
+
+table tr td {
+	padding: 5px;
+}
+
+table tr td input {
+	height: 25px;
+	background-color: #e6b3ff;
+}
+
+footer {
+	color: #660066;
+	background-color: #99ffeb;
+	height: 24px;
+	text-align: center;
+	line-height: 24px;
+	clear: both;
+}
