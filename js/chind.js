@@ -6,11 +6,13 @@
 			$("#detLog").show();
 	
 		});
+
 		$("#butSig").click(function() {
 			$("#LogSign").hide();
 			$("#detLog").hide();
 			$("#detSign").show();
 		});
+
 		$(".closels").click(function() {
 			$("#detLog").hide();
 			$("#detSign").hide();
@@ -46,3 +48,18 @@ function validLog() {
 		return true;
 	}
 }
+
+$('button[name=update]').hide();
+$('#ucpass').hide();
+
+$('#editData').click(function() {
+	$('input').removeAttr('readonly');
+	$('#ucpass').show();
+	$('button[name=update').show();
+});
+
+$('#viewData').click(function() {
+	$('#ucpass').hide();
+	$('button[name=update').hide();
+	$('input').attr('readonly', 'readonly');
+});

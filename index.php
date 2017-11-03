@@ -60,29 +60,49 @@
 					<caption>SignUp Here</caption>
 					<tr>
 						<td><label for="fname">Full Name</label></td>
-						<td><input id="fname" type="name" name="fname" placeholder="Full Name"></td>
+						<td><input id="fname" type="name" name="fname" placeholder="Full Name" required></td>
 					</tr>
 					<tr>
 						<td><label for="unames">Username</label></td>
-						<td><input id="unames" type="name" name="username" placeholder="Username"></td>
+						<td><input id="unames" type="name" name="username" placeholder="Username" required></td>
 					</tr>
 					<tr>
 						<td><label for="college">College/School</label></td>
-						<td><input id="college" type="name" name="college" placeholder="College/School"></td>
+						<td><input id="college" type="name" name="college" placeholder="College/School" required></td>
 					</tr>
 					<tr>
 						<td><label for="passs">Password</label></td>
-						<td><input id="passs" type="password" name="password" placeholder="Password"></td>
+						<td><input id="passs" type="password" name="password" placeholder="Password" required></td>
 					</tr>
 					<tr>
 						<td><label for="cpasss">Confirm Password</label></td>
-						<td><input id="cpasss" type="password" name="cpass" placeholder="Confirm Password"></td>
+						<td><input id="cpasss" type="password" name="cpass" placeholder="Confirm Password" required></td>
 					</tr>
 					<tr>
 						<td colspan="2"><center><button type="submit" name="signup">SIGN UP</button></center></td>
 					</tr>
 				</form>
 				</table>
+			</center>
+		</div>
+	</div>
+
+	<div id="cat">
+		<div id="cat_title">CATEGORIES</div>
+		<div id="cat_body">
+			<center>
+			<table>
+				<tr>
+					<td><img src="images/cse.jpg"><br>Computer Science</td>
+					<td><img src="images/gk.gif"><br>General Knowledge</td>
+					<td><img src="images/sc.png"><br>Science</td>
+					<td><img src="images/arts.jpg"><br>Arts</td>
+				</tr>
+				<tr>
+					<td colspan="4"><span style="text-align:right">And Many More...</span></td>
+				</tr>
+
+			</table>
 			</center>
 		</div>
 	</div>

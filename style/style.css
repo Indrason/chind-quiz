@@ -80,6 +80,34 @@ table tr td input {
 	cursor: pointer;
 }
 
+#cat {
+	clear: both;
+	width: 100%;
+}
+
+#cat_title {
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 30px;
+	background-color: #ccf5ff;
+	color: #ac00e6;
+}
+
+#cat_body table tr td {
+	text-align: center;
+	padding: 10px;
+	font-size: 20px;
+}
+
+#cat_body table tr td img {
+	height: 300px;
+	width: 300px;
+	border-radius: 20px;
+	border: 1px solid black;
+}
+/*		home.php		*/
+
 #menu {
 	height: 42px;
 	width: 100%;
@@ -125,7 +153,7 @@ a {
 }
 
 .user:hover {
-	cursor: hand;
+	cursor: pointer;
 	color: #ff0000;
 	background-color: #ccff66;
 }
@@ -160,12 +188,14 @@ section {
 }
 
 
+/*		profile.php		  */
+
 #pro table tr td input, #pro table tr td select {
 	background-color: transparent;
 	width: 300px;
 	border-style: none;
 	border-radius: 0px;
-	padding: 5px;
+	padding: 10px;
 	border-bottom: 2px solid black;
 	font-size: 16px;
 }
@@ -178,4 +208,42 @@ footer {
 	text-align: center;
 	line-height: 24px;
 	clear: both;
+}
+
+
+
+
+/*		about.html		*/
+
+#ab_query {
+	float: left;
+	width: 60%;
+	background-color: #b3ccff;
+}
+
+#ab_query table tr td {
+	font-size: 20px;
+}
+
+#ab_query table tr td input {
+	width: 300px;
+	height: 40px;
+	font-size: 20px;
+	line-height: 40px;
+	border-radius: 10px;
+}
+
+#ab_query table tr td textarea {
+	border-radius: 10px;
+	background-color: #e6b3ff;
+	font-size: 20px;
+}
+
+#ab_cont {
+	background-color: #b3ffd9;
+}
+
+#ab_cont table[name="cont"] tr td img {
+	height: 20px;
+	width: 20px;
 }
