@@ -60,15 +60,15 @@
 					<caption>SignUp Here</caption>
 					<tr>
 						<td><label for="fname">Full Name</label></td>
-						<td><input id="fname" type="name" name="fname" placeholder="Full Name" required></td>
+						<td><input id="fname" type="text" name="fname" placeholder="Full Name" required></td>
 					</tr>
 					<tr>
 						<td><label for="unames">Username</label></td>
-						<td><input id="unames" type="name" name="username" placeholder="Username" required></td>
+						<td><input id="unames" type="text" name="username" placeholder="Username" required></td>
 					</tr>
 					<tr>
-						<td><label for="college">College/School</label></td>
-						<td><input id="college" type="name" name="college" placeholder="College/School" required></td>
+						<td><label for="email">Email</label></td>
+						<td><input id="email" type="email" name="email" placeholder="Email" required></td>
 					</tr>
 					<tr>
 						<td><label for="passs">Password</label></td>

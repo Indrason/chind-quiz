@@ -3,13 +3,6 @@
 
 	require_once('includes/database.php');
 
-	$sql_cat = "SELECT * FROM category";
-	$run_cat = mysqli_query($con, $sql_cat);
-	$data_cat = mysqli_fetch_array($run_cat);
-
-	$sql_sub = "SELECT * FROM subject";
-	$run_sub = mysqli_query($con, $sql_sub);
-	$data_sub = mysqli_fetch_array($run_sub);
 ?>
 
 <!DOCTYPE html>
@@ -38,19 +31,37 @@
 
 	<div class="nav">
 		<div class="title">CATEGORIES</div>
+
 			<ul>
-				<li>Computer Science</li>
-				<li>General Knowledge</li>
-				<li>Current Affiars</li>
-			</ul>		
+				
+					<?php
+
+						$sql_cat = "SELECT * FROM category";
+						$run_cat = mysqli_query($con, $sql_cat); 
+
+						while($row = mysqli_fetch_array($run_cat)) {
+								$id = $row['id'];
+								$name = $row['name'];
+								echo "<li><a href='includes/quiz.php?cat=$name'>$name</a></li>";
+						}
+
+					?>
+
+			</ul>
+
 
 
 		<div class="title">SUBJECTS</div>
+
 			<ul>
-				<li>C</li>
-				<li>C++</li>
-				<li>HTML/CSS</li>
-				<li>Open Source</li>
+				<?php 
+					$sql_sub = "SELECT name FROM subject";
+					$run_sub = mysqli_query($con, $sql_sub);
+
+					while($row = mysqli_fetch_array($run_sub)) {
+						echo "<li>".$row['name']."</li>";
+					}
+				?>
 			</ul>
 		
 	</div>

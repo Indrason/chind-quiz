@@ -23,7 +23,7 @@
 		}
 		else {
 		//	header('location: ../index.php');
-			echo "<script>alert('Incorrect username or password'); location.href='../index.php';</script>";
+			echo "<script>alert('Incorrect username or password'); location.href='../../chindquiz';</script>";
 		//	redirect('../index.php');
 		}
 	}
@@ -33,21 +33,29 @@
 
 		$fname = trim($_POST['fname']);
 		$uname = trim($_POST['username']);
-		$college = trim($_POST['college']);
+		$email = trim($_POST['email']);
 		$pass = trim($_POST['password']);
 		$cpass = trim($_POST['cpass']);
 
-		if($pass == $cpass) {
-			$sql = "INSERT into users (fullname, username, college, password) VALUES ('$fname','$uname','$college','$pass')";
+		$test = "SELECT * FROM users WHERE username = '$uname'";
+		$run_test = mysqli_query($con, $test);
+		$data_test = mysqli_fetch_array($run_test);
+
+		if($data_test != NULL) {
+			echo "<script>alert('Username already exists, Please try again'); location.href='../../chindquiz';</script>";
+		}
+
+		else if($pass == $cpass) {
+			$sql = "INSERT into users (fullname, username, email, password) VALUES ('$fname','$uname','$email','$pass')";
 			$res = mysqli_query($con, $sql);
 
 			if($res) {
-				echo "<script>alert('Successfully registered, please login to continue'); location.href='../index.php';</script>";
+				echo "<script>alert('Successfully registered, please login to continue'); location.href='../../chindquiz';</script>";
 			//	header('location: ../index.php');
 			}
 		}
 		else {
-			echo "<script>alert('Passwords are different'); location.href='../index.php';</script>";
+			echo "<script>alert('Passwords are different'); location.href='../../chindquiz';</script>";
 		//	header('location: ../index.php');
 		}
 

@@ -25,10 +25,10 @@
 		<ul>
 			<li><a href="home.php">Home</a></li>
 			<li><a href="profile.php">My Account</a></li>
-			<li>About</li>
+			<li><a href="about.php">About</a></li>
 
 			<li class="right"><img src="images/logout.png" alt="logout">&nbsp;<a href="includes/logout.php">Logout</a></li>
-			<li class="right">Welcome <?php echo $_SESSION['uname']; ?></li>
+			<li class="right user">Welcome <?php echo $_SESSION['uname']; ?></li>
 		</ul>
 
 	</div>
@@ -48,11 +48,11 @@
 			<form method="post" action="includes/login.php">
 					<tr>
 						<td><label for="fname">Full Name</label></td>
-						<td><input id="fname" type="name" name="fname" placeholder="Full Name" value="<?php echo $data['fullname']; ?>" readonly></td>
+						<td><input id="fname" type="text" name="fname" placeholder="Full Name" value="<?php echo $data['fullname']; ?>" readonly></td>
 					</tr>
 					<tr>
 						<td><label for="unames">Username</label></td>
-						<td><input id="unames" type="name" name="username" placeholder="Username" value="<?php echo $data['username']; ?>" readonly></td>
+						<td><input id="unames" type="text" name="username" placeholder="Username" value="<?php echo $data['username']; ?>" readonly></td>
 					</tr>
 					<tr>
 						<td><label for="email">Email</label></td>
@@ -78,7 +78,7 @@
 					</tr>
 					<tr>
 						<td><label for="college">College/School</label></td>
-						<td><input id="college" type="name" name="college" placeholder="College/School" value="<?php echo $data['college']; ?>" readonly></td>
+						<td><input id="college" type="text" name="college" placeholder="College/School" value="<?php echo $data['college']; ?>" readonly></td>
 					</tr>
 					<tr>
 						<td><label for="passs">Password</label></td>

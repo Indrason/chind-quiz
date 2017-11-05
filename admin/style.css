@@ -35,6 +35,11 @@ body {
 	font-weight: bolder;
 }
 
+.menu_icon {
+	height: 18px;
+	width: 18px;
+}
+
 .right {
 	float: right;
 }
@@ -53,8 +58,31 @@ a {
 	height: 36px;
 }
 
+.data {
+	border-collapse: collapse;
+}
 
+.data tr td, .data tr th {
+	padding: 5px;
+	border: 1px solid black;
+}
 
+button {
+	height: 40px;
+	width: 200px;
+	background-color: #006600;
+	color: #ffe6ff;
+	border-radius: 20px;
+}
+
+button:hover {
+	cursor: pointer;
+	background-color: #6600ff;
+}
+
+#add_ques table tr td {
+	padding: 5px;
+}
 
 
 footer {

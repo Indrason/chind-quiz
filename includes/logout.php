@@ -4,6 +4,6 @@
 	session_destroy();
 
 
-	echo "<script>alert('Successfully logged out'); location.href='../index.php';</script>";
+	echo "<script>alert('Successfully logged out'); location.href='../../chindquiz';</script>";
 
 ?>
