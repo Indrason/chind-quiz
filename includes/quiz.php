@@ -30,7 +30,7 @@
 	</div>
 
 	<div id="attempt">
-		
+		<form method="post" action="result.php">
 			
 			<?php 
 
@@ -42,24 +42,26 @@
 
 				while($row = mysqli_fetch_array($run_q)) {
 					echo $i." ".$row['question']."<br>";
-					echo "<input type='radio' value='1' name='res'> ".$row['option1']."<br>";
-					echo "<input type='radio' value='2' name='res'> ".$row['option2']."<br>";
-					echo "<input type='radio' value='3' name='res'> ".$row['option3']."<br>";
-					echo "<input type='radio' value='4' name='res'> ".$row['option4']."<br><br>";
+					echo "<input type='radio' value='1' name='res$i'> ".$row['option1']."<br>";
+					echo "<input type='radio' value='2' name='res$i'> ".$row['option2']."<br>";
+					echo "<input type='radio' value='3' name='res$i'> ".$row['option3']."<br>";
+					echo "<input type='radio' value='4' name='res$i'> ".$row['option4']."<br><br>";
 
 					$i++;
 				}
 
-
-
+				$i--;
+				echo "<input type='text' name='cat' value='$catn' hidden>";
+				echo "<input type='number' name='no' value='$i' hidden>";
+				echo "<button type='submit'>SUBMIT</button>";	
 			?>
 
-		
+		</form>
 	</div>
 
 
-
 	<footer>&copy; CHIND Quiz, 2017</footer>
+	<script src="../js/chind.js"></script>
 
 </body>
 </html>

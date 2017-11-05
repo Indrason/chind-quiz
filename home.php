@@ -19,11 +19,11 @@
 
 	<div id="menu">
 		<ul>
-			<li><a href="home.php">Home</a></li>
-			<li><a href="profile.php">My Account</a></li>
-			<li><a href="about.php">About</a></li>
+			<a href="home.php"><li>Home</li></a>
+			<a href="profile.php"><li>My Account</li></a>
+			<a href="about.php"><li>About</li></a>
 
-			<li class="right"><img src="images/logout.png" alt="logout">&nbsp;<a href="includes/logout.php">Logout</a></li>
+			<a href="includes/logout.php"><li class="right"><img src="images/logout.png" alt="logout">&nbsp;Logout</li></a>
 			<li class="right user">Welcome <?php echo $_SESSION['uname']; ?></li>
 		</ul>
 
@@ -42,7 +42,7 @@
 						while($row = mysqli_fetch_array($run_cat)) {
 								$id = $row['id'];
 								$name = $row['name'];
-								echo "<li><a href='includes/quiz.php?cat=$name'>$name</a></li>";
+								echo "<a href='includes/quiz.php?cat=$name'><li>$name</li></a>";
 						}
 
 					?>
@@ -66,8 +66,25 @@
 		
 	</div>
 
-	<section>
-		Subjects	
+	<section id="home_img">
+		<div id="lgsg">QUOTES</div>
+		<table>
+			<tr>
+				<td><img src="images/1.jpg"></td>
+				<td><img src="images/2.jpg"></td>
+				<td><img src="images/3.jpg"></td>
+			</tr>
+			<tr>
+				<td><img src="images/4.jpg"></td>
+				<td><img src="images/5.jpg"></td>
+				<td><img src="images/6.jpg"></td>
+			</tr>
+			<tr>
+				<td><img src="images/7.jpg"></td>
+				<td><img src="images/8.jpg"></td>
+				<td><img src="images/9.jpg"></td>
+			</tr>
+		</table>	
 	</section>
 
 

@@ -51,15 +51,25 @@ function validLog() {
 
 $('button[name=update]').hide();
 $('#ucpass').hide();
+$('#quizHis').hide();
 
 $('#editData').click(function() {
+	$('#pro').show();
 	$('input').removeAttr('readonly');
 	$('#ucpass').show();
-	$('button[name=update').show();
+	$('button[name=update]').show();
+	$('#quizHis').hide();
 });
 
 $('#viewData').click(function() {
+	$('#pro').show();
 	$('#ucpass').hide();
 	$('button[name=update').hide();
 	$('input').attr('readonly', 'readonly');
+	$('#quizHis').hide();
+});
+
+$('#viewMarks').click(function() {
+	$('#quizHis').show();
+	$('#pro').hide();
 });

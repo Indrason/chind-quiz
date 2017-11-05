@@ -44,6 +44,25 @@
 				}
 			?>
 		</table>
+		<br>
+
+		<button id="but_add_cat">ADD CATEGORY</button>
+		<br><br>
+
+		<div id="add_cat">
+			<table>
+				<form action="manageData.php" method="post">
+					<tr>
+						<td><label for="cat">Category</label></td>
+						<td><input type="text" id="cat" name="cat" placeholder="Enter category"  style="height:40px; width:500px;" required></td>
+					</tr>
+					<tr>
+						<td colspan="2"><center><button type="submit" name="addCat">ADD</button></center></td>
+					</tr>
+				</form>
+			</table>
+		</div>
+
 		</center>
 	</div>
 
@@ -68,6 +87,25 @@
 				}
 			?>
 		</table>
+		<br>
+
+		<button id="but_add_sub">ADD SUBJECT</button>
+		<br><br>
+
+		<div id="add_sub">
+			<table>
+				<form action="manageData.php" method="post">
+					<tr>
+						<td><label for="sub">Subject</label></td>
+						<td><input type="text" id="sub" name="sub" placeholder="Enter subject"  style="height:40px; width:500px;" required></td>
+					</tr>
+					<tr>
+						<td colspan="2"><center><button type="submit" name="addSub">ADD</button></center></td>
+					</tr>
+				</form>
+			</table>
+		</div>
+
 		</center>
 	</div>
 
@@ -94,7 +132,7 @@
 
 				while($row = mysqli_fetch_array($run_ques)) {
 					echo "<tr>";
-					echo "<td>".$row['id']."</td><td>".$row['question']."</td><td>".$row['option1']."</td><td>".$row['option2']."</td><td>".$row['option3']."</td><td>".$row['option4']."</td><td>".$row['answer']."</td><td>".$row['category']."</td><td>";
+					echo "<td>".$row['id']."</td><td>".$row['question']."</td><td>".$row['option1']."</td><td>".$row['option2']."</td><td>".$row['option3']."</td><td>".$row['option4']."</td><td>".$row['answer']."</td><td>".$row['category']."</td>";
 					echo "</tr>";
 				}
 
@@ -103,7 +141,7 @@
 		</table>
 		<br>
 
-		<button id="but_add_ques">ADD QUESTIONS</button>
+		<button id="but_add_ques">ADD QUESTION</button>
 		<br><br>
 
 		<div id="add_ques">
@@ -194,6 +232,7 @@
 			?>
 
 		</table>
+		<br>
 		</center>
 	</div>
 
@@ -223,6 +262,7 @@
 
 			?>
 		</table>
+		<br>
 		</center>
 	</div>
 

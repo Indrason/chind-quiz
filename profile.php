@@ -23,11 +23,11 @@
 
 	<div id="menu">
 		<ul>
-			<li><a href="home.php">Home</a></li>
-			<li><a href="profile.php">My Account</a></li>
-			<li><a href="about.php">About</a></li>
+			<a href="home.php"><li>Home</li></a>
+			<a href="profile.php"><li>My Account</li></a>
+			<a href="about.php"><li>About</li></a>
 
-			<li class="right"><img src="images/logout.png" alt="logout">&nbsp;<a href="includes/logout.php">Logout</a></li>
+			<a href="includes/logout.php"><li class="right"><img src="images/logout.png" alt="logout">&nbsp;Logout</li></a>
 			<li class="right user">Welcome <?php echo $_SESSION['uname']; ?></li>
 		</ul>
 
@@ -35,8 +35,9 @@
 
 	<div class="nav">
 		<ul>
-			<li><span id="viewData">View Profile</span></li>
-			<li><span id="editData">Edit Profile</span></li>
+			<span id="viewData"><li>View Profile</li></span>
+			<span id="editData"><li>Edit Profile</li></span>
+			<span id="viewMarks"><li>View Quiz History</li></span>
 		</ul>
 	</div>
 
@@ -96,8 +97,36 @@
 
 	</section>
 
+	<section id="quizHis">
+		<div id="lgsg">MY QUIZ HISTORY</div>
 
+		<table>
+			<tr>
+				<th>SL. NO</th>
+				<th>DATE / TIME</th>
+				<th>CATEGORY</th>
+				<th>MARKS OBTAINED</th>
+				<th>TOTAL MARKS</th>
+			</tr>
 
+			<?php
+
+				$uname = $_SESSION['uname'];
+				$sl = 1;
+				$sql_test = "SELECT * FROM result WHERE username = '$uname'";
+				$run_test = mysqli_query($con, $sql_test);
+				while($row = mysqli_fetch_array($run_test)) {
+					echo "<tr>";
+					echo "<td>".$sl."</td><td>".$row['dated']."</td><td>".$row['category']."</td><td>".$row['marks']."</td><td>".$row['totalmarks']."</td>";
+					echo "</tr>";
+					$sl++;
+				}	
+
+				?>
+		</table>
+		<br>
+		
+	</section>
 
 
 

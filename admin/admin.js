@@ -11,6 +11,8 @@ $("#menu_cat").click(function() {
 	$("#ques").hide();
 	$("#user").hide();
 	$("#feedback").hide();
+
+	$("#add_cat").hide();
 });
 
 $("#menu_sub").click(function() {
@@ -19,6 +21,8 @@ $("#menu_sub").click(function() {
 	$("#ques").hide();
 	$("#user").hide();
 	$("#feedback").hide();
+
+	$("#add_sub").hide();
 });
 
 $("#menu_ques").click(function() {
@@ -50,4 +54,12 @@ $("#menu_feedback").click(function() {
 
 $("#but_add_ques").click(function() {
 	$("#add_ques").show();
+});
+
+$("#but_add_cat").click(function() {
+	$("#add_cat").show();
+});
+
+$("#but_add_sub").click(function() {
+	$("#add_sub").show();
 });

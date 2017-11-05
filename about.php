@@ -16,25 +16,28 @@
 	<link rel="stylesheet" href="style/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
-<body>
+<body bgcolor="#ffffb3">
 	<header>
 		CHIND QUIZ
 	</header>
 
 	<div id="menu">
 		<ul>
-			<li><a href="home.php">Home</a></li>
-			<li><a href="profile.php">My Account</a></li>
-			<li><a href="about.php">About</a></li>
+			<a href="home.php"><li>Home</li></a>
+			<a href="profile.php"><li>My Account</li></a>
+			<a href="about.php"><li>About</li></a>
 
-			<li class="right"><img src="images/logout.png" alt="logout">&nbsp;<a href="includes/logout.php">Logout</a></li>
+			<a href="includes/logout.php"><li class="right"><img src="images/logout.png" alt="logout">&nbsp;Logout</li></a>
 			<li class="right user">Welcome <?php echo $_SESSION['uname']; ?></li>
 		</ul>
 
 	</div>
 
-	<div>
-		CHIND QUIZ is a site that helps the students to increase their knowledge by the attempting various quizes and helps themselves to improve.
+	<div id="ab_detail">
+		<center><img src="images/quiz.gif" height="250px"></center> <br>
+		CHIND QUIZ is a site that helps the students or other people to increase their knowledge by attempting various quizes and keep themselves up to date. Any user can attempt quiz in any category where they want. They can even read new updates or information that they need to know.<br>
+
+		<br>
 	</div>
 
 	<div id="ab_query">
@@ -88,11 +91,12 @@
 				<td>Lovely Professional University<br>Phagwara, Punjab - 144411<br>India</td>
 			</tr>
 		</table>
-		<table>
+		<table name="social">
 			<tr>
-				<td><img src="images/logo_facebook.gif" alt="Facebook"></td>
-				<td><img src="images/logo_twitter.gif" alt="Twitter"></td>
-				<td><img src="images/logo_linkedin.gif" alt="LinkedIn"></td>
+				<td><a href="https://www.facebook.com/indrason.ngangbam.7" target="_blank"><img src="images/logo_facebook.gif" alt="Facebook"></a></td>
+				<td><a href="https://twitter.com/IndrasonC" target="_blank"><img src="images/logo_twitter.gif" alt="Twitter"></a></td>
+				<td><a href="https://www.linkedin.com/in/indrason-ngangbam-154493129/" target="_blank"><img src="images/logo_linkedin.gif" alt="LinkedIn"></a></td>
+				<td><a href="https://github.com/Indrason" target="_blank"><img src="images/GitHub-Logo.png"></a></td>
 			</tr>
 		</table>
 		</center>

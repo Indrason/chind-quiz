@@ -80,7 +80,7 @@ button:hover {
 	background-color: #6600ff;
 }
 
-#add_ques table tr td {
+#add_ques table tr td, #add_cat table tr td {
 	padding: 5px;
 }
 

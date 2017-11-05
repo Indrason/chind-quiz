@@ -20,4 +20,26 @@
 		}
 	}
 
+	if(isset($_POST['addCat'])) {
+		$cat = trim($_POST['cat']);
+
+		$sql_catA = "INSERT INTO category (name) VALUES ('$cat')";
+		$run_catA = mysqli_query($con, $sql_catA);
+
+		if($run_catA) {
+			echo "<script>alert('Category successfully added'); location.href='../admin';</script>";
+		}
+	}
+
+	if(isset($_POST['addSub'])) {
+		$sub = trim($_POST['sub']);
+
+		$sql_subA = "INSERT INTO subject (name) VALUES ('$sub')";
+		$run_subA = mysqli_query($con, $sql_subA);
+
+		if($run_subA) {
+			echo "<script>alert('Subject successfully added'); location.href='../admin';</script>";
+		}
+	}
+
 ?>
