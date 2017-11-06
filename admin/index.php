@@ -24,6 +24,8 @@
 		</ul>
 	</div>
 
+	<center><h1>Welcome to Admin Portal</h1></center>
+
 	<div id="cat">
 		<div id="subt">CATEGORIES</div>
 		<br>
@@ -35,7 +37,7 @@
 			</tr>
 
 			<?php
-				$sql_cat = "SELECT * FROM category";
+				$sql_cat = "SELECT id, name FROM category";
 				$run_cat = mysqli_query($con, $sql_cat);
 				while($row = mysqli_fetch_array($run_cat)) {
 					echo "<tr>";
@@ -77,7 +79,7 @@
 			</tr>
 
 			<?php
-				$sql_sub = "SELECT * FROM subject";
+				$sql_sub = "SELECT id, name FROM subject";
 				$run_sub = mysqli_query($con, $sql_sub);
 
 				while($row = mysqli_fetch_array($run_sub)) {
@@ -276,6 +278,10 @@
 
 
 	<script src="admin.js"></script>
+
+	<?php 
+		mysqli_close($con);
+	?>
 
 </body>
 </html>

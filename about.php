@@ -25,7 +25,7 @@
 		<ul>
 			<a href="home.php"><li>Home</li></a>
 			<a href="profile.php"><li>My Account</li></a>
-			<a href="about.php"><li>About</li></a>
+			<a href="about.php"><li class="active">About</li></a>
 
 			<a href="includes/logout.php"><li class="right"><img src="images/logout.png" alt="logout">&nbsp;Logout</li></a>
 			<li class="right user">Welcome <?php echo $_SESSION['uname']; ?></li>
@@ -107,6 +107,10 @@
 
 
 	<footer>&copy; CHIND Quiz, 2017</footer>
+
+	<?php
+		mysqli_close($con);
+	?>
 
 </body>
 </html>

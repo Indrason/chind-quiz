@@ -11,6 +11,8 @@
 	</header>
 
 	<div id="slider">
+		<br>
+		<center><span style="color: white;">Attempt a quiz and check your knowledge...</span></center>
 		<div id="image">
 			<img id="img" src="images/1.jpg">
 		</div>

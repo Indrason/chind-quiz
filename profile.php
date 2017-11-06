@@ -24,7 +24,7 @@
 	<div id="menu">
 		<ul>
 			<a href="home.php"><li>Home</li></a>
-			<a href="profile.php"><li>My Account</li></a>
+			<a href="profile.php"><li class="active">My Account</li></a>
 			<a href="about.php"><li>About</li></a>
 
 			<a href="includes/logout.php"><li class="right"><img src="images/logout.png" alt="logout">&nbsp;Logout</li></a>
@@ -133,6 +133,10 @@
 	<footer>&copy; CHIND Quiz, 2017</footer>
 
 	<script src="js/chind.js"></script>
+
+	<?php
+		mysqli_close($con);
+	?>
 
 
 </body>

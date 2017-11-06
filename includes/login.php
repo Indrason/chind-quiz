@@ -5,10 +5,10 @@
 	session_start();
 	
 	if(isset($_POST['login'])) {
-		$uname = trim($_POST['username']);
-		$pass = trim($_POST['password']);
+		$uname = htmlentities(trim($_POST['username']));
+		$pass = htmlentities(trim($_POST['password']));
 
-		$sql = "SELECT * FROM users WHERE username='".$uname."' AND password='".$pass."'";
+		$sql = "SELECT username, password FROM users WHERE username='".$uname."' AND password='".$pass."'";
 		$res = mysqli_query($con, $sql);
 		$data = mysqli_fetch_array($res);
 
@@ -19,30 +19,27 @@
 		else if($uname == $data['username'] && $pass == $data['password']) {
 			$_SESSION['uname'] = $uname;
 			echo "<script>alert('Successfully logged in'); location.href='../home.php';</script>";
-		//	header('location: ../home.php');
 		}
 		else {
-		//	header('location: ../index.php');
-			echo "<script>alert('Incorrect username or password'); location.href='../../chindquiz';</script>";
-		//	redirect('../index.php');
+			echo "<script>alert('Incorrect username or password'); location.href='../../chind-quiz';</script>";
 		}
 	}
 
 
 	if(isset($_POST['signup'])) {
 
-		$fname = trim($_POST['fname']);
-		$uname = trim($_POST['username']);
-		$email = trim($_POST['email']);
-		$pass = trim($_POST['password']);
-		$cpass = trim($_POST['cpass']);
+		$fname = htmlentities(trim($_POST['fname']));
+		$uname = htmlentities(trim($_POST['username']));
+		$email = htmlentities(trim($_POST['email']));
+		$pass = htmlentities(trim($_POST['password']));
+		$cpass = htmlentities(trim($_POST['cpass']));
 
-		$test = "SELECT * FROM users WHERE username = '$uname'";
+		$test = "SELECT username FROM users WHERE username = '$uname'";
 		$run_test = mysqli_query($con, $test);
 		$data_test = mysqli_fetch_array($run_test);
 
 		if($data_test != NULL) {
-			echo "<script>alert('Username already exists, Please try again'); location.href='../../chindquiz';</script>";
+			echo "<script>alert('Username already exists, Please try again'); location.href='../../chind-quiz';</script>";
 		}
 
 		else if($pass == $cpass) {
@@ -50,13 +47,11 @@
 			$res = mysqli_query($con, $sql);
 
 			if($res) {
-				echo "<script>alert('Successfully registered, please login to continue'); location.href='../../chindquiz';</script>";
-			//	header('location: ../index.php');
+				echo "<script>alert('Successfully registered, please login to continue'); location.href='../../chind-quiz';</script>";
 			}
 		}
 		else {
-			echo "<script>alert('Passwords are different'); location.href='../../chindquiz';</script>";
-		//	header('location: ../index.php');
+			echo "<script>alert('Passwords are different'); location.href='../../chind-quiz';</script>";
 		}
 
 	}
@@ -64,14 +59,14 @@
 
 	if(isset($_POST['update'])) {
 
-		$fname = trim($_POST['fname']);
-		$uname = trim($_POST['username']);
-		$email = trim($_POST['email']);
-		$dob = trim($_POST['dob']);
-		$qual = trim($_POST['qual']);
-		$college = trim($_POST['college']);
-		$pass = trim($_POST['password']);
-		$cpass = trim($_POST['cpassword']);
+		$fname = htmlentities(trim($_POST['fname']));
+		$uname = htmlentities(trim($_POST['username']));
+		$email = htmlentities(trim($_POST['email']));
+		$dob = htmlentities(trim($_POST['dob']));
+		$qual = htmlentities(trim($_POST['qual']));
+		$college = htmlentities(trim($_POST['college']));
+		$pass = htmlentities(trim($_POST['password']));
+		$cpass = htmlentities(trim($_POST['cpassword']));
 
 		$abc = $_SESSION['uname'];
 
@@ -91,10 +86,10 @@
 
 
 	if(isset($_POST['query'])) {
-		$name = trim($_POST['name']);
-		$sub = trim($_POST['subject']);
-		$email = trim($_POST['email']);
-		$msg = trim($_POST['message']);
+		$name = htmlentities(trim($_POST['name']));
+		$sub = htmlentities(trim($_POST['subject']));
+		$email = htmlentities(trim($_POST['email']));
+		$msg = htmlentities(trim($_POST['message']));
 
 		$sql = "INSERT INTO feedback (name, subject, email, message) VALUES ('$name','$sub','$email','$msg')";
 		$run = mysqli_query($con, $sql);
@@ -105,7 +100,5 @@
 	}
 	
 
-
 	mysqli_close($con);
-
 ?>

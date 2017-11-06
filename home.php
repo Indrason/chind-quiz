@@ -19,7 +19,7 @@
 
 	<div id="menu">
 		<ul>
-			<a href="home.php"><li>Home</li></a>
+			<a href="home.php"><li class="active">Home</li></a>
 			<a href="profile.php"><li>My Account</li></a>
 			<a href="about.php"><li>About</li></a>
 
@@ -36,7 +36,7 @@
 				
 					<?php
 
-						$sql_cat = "SELECT * FROM category";
+						$sql_cat = "SELECT id, name FROM category";
 						$run_cat = mysqli_query($con, $sql_cat); 
 
 						while($row = mysqli_fetch_array($run_cat)) {
@@ -91,6 +91,10 @@
 
 
 	<footer>&copy; CHIND Quiz, 2017</footer>
+
+	<?php
+		mysqli_close($con);
+	?>
 
 </body>
 </html>
